@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-todo",
+  "name": "react-redux-todos",
   "version": "0.1.0",
   "description": "",
   "scripts": {
@@ -78,6 +78,6 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/fellipeale/react-redux-todos"
   }
 }

@@ -1,0 +1,34 @@
+$page-bg: #dcdcdc;
+$main-bg: #ffffff;
+
+body {
+  background-color: $page-bg;
+  font-family: 'Malgun Gothic', sans-serif;
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+header h1 {
+  font-size: 70px;
+  color: grey;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid $page-bg;
+    padding-top: 5px;
+    width: 90%;
+}
+
+.container {
+  background-color: $main-bg;
+  padding-bottom: 15px;
+  input {
+    outline: none;
+    border: none;
+    padding: 15px;
+  }
+  .todo-list > div {
+    padding: 10px 0; 
+  }
+}
