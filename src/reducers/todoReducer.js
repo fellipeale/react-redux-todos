@@ -16,6 +16,10 @@ function todoReducer(state = initialState.todos, action) {
                 text: action.text,
                 completed: false
             }, ...state];
+        case types.DELETE_TODO:
+            return state.filter((todo) => {
+                return todo.id != action.id;
+            });
         default:
             return state;
     }
