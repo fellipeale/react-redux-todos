@@ -8,7 +8,13 @@ class TodoList extends Component {
             <div className="todo-list">
                 {
                     this.props.todos.map((todo) => {
-                        return <TodoItem key={todo.id} todo={todo} deleteTodo={this.props.deleteTodo} />;
+                        return (
+                            <TodoItem 
+                                key={todo.id} 
+                                todo={todo} 
+                                deleteTodo={this.props.deleteTodo}
+                                completeTodo={this.props.completeTodo} />
+                        );
                     })
                 }
             </div>
@@ -18,7 +24,9 @@ class TodoList extends Component {
 }
 
 TodoList.propTypes = {
-    todos: PropTypes.array.isRequired
+    todos: PropTypes.array.isRequired,
+    deleteTodo: PropTypes.func.isRequired,
+    completeTodo: PropTypes.func.isRequired
 };
 
 export default TodoList; 

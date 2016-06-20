@@ -17,6 +17,7 @@ export function deleteTodo(id) {
 export function completeTodo(id) {
     return {
         type: types.COMPLETE_TODO,
-        id: id
+        id: id,
+        completed: true
     };
 }

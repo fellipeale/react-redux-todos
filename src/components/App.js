@@ -11,7 +11,10 @@ class App extends Component {
             <div className="container">
                 <TodoInput saveTodo={this.props.actions.saveTodo} />
                 <hr />
-                <TodoList todos={this.props.todos} deleteTodo={this.props.actions.deleteTodo} />
+                <TodoList 
+                    todos={this.props.todos} 
+                    deleteTodo={this.props.actions.deleteTodo}
+                    completeTodo={this.props.actions.completeTodo} />
             </div>
         );
     }

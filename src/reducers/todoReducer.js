@@ -1,5 +1,5 @@
 import *  as types from '../constants/actionTypes';
-//import objectAssign from 'object-assign';
+import objectAssign from 'object-assign';
 import initialState from './initialState';
 
 function getId(todos) {
@@ -19,6 +19,11 @@ function todoReducer(state = initialState.todos, action) {
         case types.DELETE_TODO:
             return state.filter((todo) => {
                 return todo.id != action.id;
+            });
+        case types.COMPLETE_TODO:
+            return state.map((todo) => {
+                return todo.id === action.id ? 
+                    objectAssign({}, todo, {completed: action.completed}) : todo;
             });
         default:
             return state;
